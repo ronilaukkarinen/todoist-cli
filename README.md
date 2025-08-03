@@ -1,6 +1,6 @@
 # 🤖 Minimal Todoist-CLI
 
-![Todoist](https://img.shields.io/badge/todoist-badge?style=for-the-badge&logo=todoist&logoColor=%23ffffff&color=%23E44332) ![bash](https://img.shields.io/badge/bash-%23121011.svg?style=for-the-badge&color=%23222222&logo=gnu-bash&logoColor=white)
+![bash](https://img.shields.io/badge/bash-%23121011.svg?style=for-the-badge&color=%23222222&logo=gnu-bash&logoColor=white) ![Todoist](https://img.shields.io/badge/todoist-badge?style=for-the-badge&logo=todoist&logoColor=%23ffffff&color=%23E44332) 
 
 ## List tasks with bash 🦾
 
@@ -18,6 +18,7 @@ A simple, dependency-free bash script to list your Todoist tasks sorted by creat
 ## Installation
 
 1. Clone or download the script:
+2. 
 ```bash
 git clone https://github.com/ronilaukkarinen/todoist-cli
 cd todoist-cli
@@ -25,6 +26,7 @@ chmod +x todoist.sh
 ```
 
 2. Create a symlink for easy access:
+3. 
 ```bash
 sudo ln -s /path/to/todoist-cli/todoist.sh /usr/local/bin/todoist
 ```
@@ -32,6 +34,7 @@ sudo ln -s /path/to/todoist-cli/todoist.sh /usr/local/bin/todoist
 3. Get your Todoist API token from [https://todoist.com/prefs/integrations](https://todoist.com/prefs/integrations)
 
 4. Set your token as an environment variable:
+5. 
 ```bash
 export TODOIST_TOKEN="your_token_here"
 # Add to your ~/.bashrc or ~/.zshrc to make it permanent
@@ -63,11 +66,6 @@ todoist --help
 2024-01-16 | Review project proposal | https://todoist.com/showTask?id=123457
 2024-01-17 | Schedule dentist appointment | https://todoist.com/showTask?id=123458
 --- 3 tasks for 3 days timespan
-```
-
-When filters are applied:
-```
---- 12 tasks (filtered from 25) for 5 days timespan
 ```
 
 ## Requirements
