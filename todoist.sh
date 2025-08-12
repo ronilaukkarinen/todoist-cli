@@ -76,9 +76,13 @@ try:
         print(f'{YELLOW}No tasks found{RESET}')
         sys.exit(0)
     
-    # Get date range
-    oldest_date = datetime.fromisoformat(sorted_tasks[0]['created_at'].replace('Z', '+00:00'))
-    newest_date = datetime.fromisoformat(sorted_tasks[-1]['created_at'].replace('Z', '+00:00'))
+    # Get date range - fix assignment based on sort order
+    if newest_first:
+        oldest_date = datetime.fromisoformat(sorted_tasks[-1]['created_at'].replace('Z', '+00:00'))
+        newest_date = datetime.fromisoformat(sorted_tasks[0]['created_at'].replace('Z', '+00:00'))
+    else:
+        oldest_date = datetime.fromisoformat(sorted_tasks[0]['created_at'].replace('Z', '+00:00'))
+        newest_date = datetime.fromisoformat(sorted_tasks[-1]['created_at'].replace('Z', '+00:00'))
     days_span = (newest_date - oldest_date).days + 1
     
     for task in sorted_tasks:
